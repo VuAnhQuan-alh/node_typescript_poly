@@ -1,20 +1,15 @@
 import express from "express";
-import { create } from "./../controllers/product";
+import { create, update, list, read, remove, prodById } from "./../controllers/product";
 
 const router = express.Router();
 
-router.get('/products', (request, response) => {
-  response.json({
-    message: "Successfully"
-  });
-});
-router.get('/product/:id', (request, response) => {
-  response.json({
-    id: request.params.id,
-    name: "Product detail"
-  });
-});
 router.post('/product', create);
+router.put('/product/:prodId', update);
+router.get('/products', list);
+router.get('/product/:prodId', read);
+router.delete('/product/:prodId', remove);
+
+router.param('prodId', prodById)
 
 
 module.exports = router;
