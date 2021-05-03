@@ -1,11 +1,11 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 const { ObjectId } = mongoose.Schema;
 
 const productSchema = mongoose.Schema({
   name: {
     type: String,
     trim: true,
-    maxLength: 60,
+    maxLength: 48,
     required: true
   },
   description: {
@@ -39,6 +39,6 @@ const productSchema = mongoose.Schema({
     type: Number,
     default: 0
   }
-}, { timeStamps: true });
+}, { timestamps: true });
 
 module.exports = mongoose.model("Product", productSchema);

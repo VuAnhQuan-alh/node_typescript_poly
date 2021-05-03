@@ -1,0 +1,20 @@
+input.spin::-webkit-outer-spin-button,
+input.spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+
+#btn-logout {
+  display: none;
+  animation-delay: 0.25;
+}
+#btn--user__detail:hover #btn-logout {
+  display: block;
+}
